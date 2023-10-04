@@ -1,0 +1,36 @@
+<html>
+<head><link rel="stylesheet" href="codegrid.css"></head>
+
+<body>
+
+<div class="container">
+	<div class="nevbar">
+		<div class="empty_btn"></div>
+
+		<div class="home_btn">Home</div>
+		<div class="about_btn">About</div>
+		<div class="join_btn">Join</div>
+	</div>
+	<div class="menu_btn">
+		Menu
+	</div>
+</div>
+<div class="menu_area">
+	<div class="exit_btn">Exit</div>
+</div>
+
+<script type="text/javascript">
+	document.querySelector(".menu_btn").addEventListener("click",function(){
+		document.querySelector(".menu_btn").classList.add("active");
+		document.querySelector(".nevbar").classList.add("active");
+		document.querySelector(".menu_area").classList.add("active");
+	});
+	document.querySelector(".exit_btn").addEventListener("click",function(){
+		document.querySelector(".menu_btn").classList.remove("active");
+		document.querySelector(".nevbar").classList.remove("active");
+		document.querySelector(".menu_area").classList.remove("active");
+	});
+</script>
+
+</body>
+</html>
