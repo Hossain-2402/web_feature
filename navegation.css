@@ -1,0 +1,143 @@
+body{
+	background: #4d4d4d;
+	padding: 0;
+	margin: 0;
+}
+.nev_bar{
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	padding: 2vh 0 2vh 0;
+	box-shadow: 0 0 10px black;
+}
+.logo{
+	width: 5vw;
+	color: white;
+	padding: 1vh 2vw 1vh 2vw;
+	margin: 0 0 0 2vw;
+	border-radius: 6px;
+	box-shadow: 0 0 5px black;
+	text-align: center;
+}
+.menu_btn{
+	position: absolute;
+	width: 5vw;
+	color: white;
+	right: 2vw;
+	top: 0;
+	padding: 1vh 2vw 1vh 2vw;
+	margin: 2vh 0 0 2vw;
+	border-radius: 6px;
+	box-shadow: 0 0 5px black;
+	text-align: center;	
+	cursor: pointer;
+}
+.about_area{
+	position: absolute;
+	width: 20vw;
+	top: 100%;
+	left: 20vw;
+	background: white;
+	color: black;
+	font-family: verdana;
+	font-weight: 600;
+	text-align: center;
+	padding: 25vh 0 25vh 0;
+	border-radius: 10px;
+	opacity: 0;
+	box-shadow: 0 0 80px black;
+	transform: rotate(25deg);
+	cursor: pointer;
+	transition: .5s;
+}
+.about_area:hover{
+	box-shadow: 0 0 150px black;
+}
+.about_area.active{
+	top: 30%;
+	opacity: 1;
+}
+.subscribtion_area{
+	position: absolute;
+	width: 20vw;
+	top: 100%;
+	left: 40vw;
+	background: white;
+	color: black;
+	font-family: verdana;
+	font-weight: 600;
+	text-align: center;
+	padding: 25vh 0 25vh 0;
+	border-radius: 10px;
+	opacity: 0;
+	box-shadow: 0 0 80px black;
+	transform: rotate(-15deg);
+	cursor: pointer;
+	transition: .8s;
+}
+.subscribtion_area:hover{
+	box-shadow: 0 0 150px black;
+}
+.subscribtion_area.active{
+	top: 30%;
+	opacity: 1;
+}
+.shop_area{
+	position: absolute;
+	width: 20vw;
+	top: 100%;
+	left: 60vw;
+	background: white;
+	color: black;
+	font-family: verdana;
+	font-weight: 600;
+	text-align: center;
+	padding: 25vh 0 25vh 0;
+	border-radius: 10px;
+	opacity: 0;
+	box-shadow: 0 0 80px black;
+	transform: rotate(20deg);
+	cursor: pointer;	
+	transition: 1.1s;
+}
+.shop_area:hover{
+	box-shadow: 0 0 150px black;
+}
+.shop_area.active{
+	top: 30%;
+	opacity: 1;
+}
+
+.display_area{
+	position: fixed;
+	height: 80vh;
+	width: 80vw;
+	top: 15%;
+	left: 10%;
+	opacity: 0;
+	transform: rotateX(90deg);
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 0 50px black;
+	transition: 1.3s;
+}
+.display_area.active{
+	opacity: 1;
+	transform: rotateX(0deg);
+}
+.exit_btn{
+	width: 5vw;
+	position: absolute;
+	top: 2vh;
+	right: 2vw;
+	background: none;
+	color: black;
+	border-radius: 5px;
+	box-shadow: 0 0 10px black;
+	font-family: verdana;
+	padding: 1vh 0 1vh 0;
+	text-align: center;
+	backdrop-filter: blur(10px);
+	cursor: pointer;
+}

@@ -1,0 +1,58 @@
+<html>
+<head>
+	<link rel="stylesheet" href="navegation.css">
+</head>
+<body>
+
+<div class="nev_bar">
+	<div class="logo">Rose</div>
+	<div class="menu_btn">Menu</div>
+</div>
+
+<div class="about_area">
+	<div class="about_title">About</div>
+	<div class="website"></div>
+</div>
+<div class="subscribtion_area">Subsctibe</div>
+<div class="shop_area">Shop</div>
+
+<div class="display_area">
+	<div class="exit_btn">Exit</div>
+</div>
+
+
+<script type="text/javascript">
+	document.querySelector(".menu_btn").addEventListener("click",function(){
+		document.querySelector(".about_area").classList.add("active");
+		document.querySelector(".subscribtion_area").classList.add("active");
+		document.querySelector(".shop_area").classList.add("active");
+	});
+
+
+	document.querySelector(".about_area").addEventListener("click",function(){
+		document.querySelector(".about_area").classList.remove("active");
+		document.querySelector(".subscribtion_area").classList.remove("active");
+		document.querySelector(".shop_area").classList.remove("active");
+		document.querySelector(".display_area").classList.add("active");
+	});
+	document.querySelector(".subscribtion_area").addEventListener("click",function(){
+		document.querySelector(".about_area").classList.remove("active");
+		document.querySelector(".subscribtion_area").classList.remove("active");
+		document.querySelector(".shop_area").classList.remove("active");
+		document.querySelector(".display_area").classList.add("active");
+	});
+	document.querySelector(".shop_area").addEventListener("click",function(){
+		document.querySelector(".about_area").classList.remove("active");
+		document.querySelector(".subscribtion_area").classList.remove("active");
+		document.querySelector(".shop_area").classList.remove("active");
+		document.querySelector(".display_area").classList.add("active");
+	});
+
+
+	document.querySelector(".exit_btn").addEventListener("click",function(){
+		document.querySelector(".display_area").classList.remove("active");
+	});
+</script>
+
+</body>
+</html>
