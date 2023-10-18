@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	body{
+		background:#4d4d4d;
+		padding:0;
+		margin:0;
+		overflow-x:hidden;
+	}
+	.box{
+		height:50vh;
+		width:100vw;
+		border-radius: 10px;
+		background:#4d4d4d;
+		margin:100vh 0 0 50%;
+		transform: translate(-50%,0);
+		display: flex;
+	}
+	.b1{
+		flex:1;
+		background: #4d4d4d;
+		box-shadow: 0 0 10px black;
+		border-radius:10px;
+		height:100%;
+		margin:0 2vw 0 2vw;
+	}
+	.b2{
+		flex:1;
+		background: #4d4d4d;
+		box-shadow: 0 0 10px black;
+		border-radius:10px;
+		height:100%;
+		margin:0 2vw 0 2vw;
+	}
+	.b3{
+		flex:1;
+		background: #4d4d4d;
+		box-shadow: 0 0 10px black;
+		border-radius:10px;
+		height:100%;
+		margin:0 2vw 0 2vw;
+	}
+	.box_2{
+		height:50vh;
+		width:100vw;
+		border-radius: 10px;
+		background:#4d4d4d;
+		margin:100vh 0 0 50%;
+		transform: translate(-50%,0);
+		display: flex;
+	}
+</style>
+
+</head>
+<body>
+
+	<div class="box">
+		<div class="b1"></div>
+		<div class="b2"></div>
+		<div class="b3"></div>
+
+	</div>
+
+
+
+	<div class="box_2"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+<script type="text/javascript">
+	
+
+	let box = document.querySelector(".box");
+	let b1 = document.querySelector(".b1");
+	let b2 = document.querySelector(".b2");
+	let b3 = document.querySelector(".b3");
+
+	gsap.registerPLugin(ScrollTrigger);
+
+	gsap.to(box, {
+		scrollTrigger: {
+			trigger : box,
+			start : "top top",
+			end : "bottom bottom",
+			pin : b2
+		}
+	});
+
+</script>
+</body>
+</html>

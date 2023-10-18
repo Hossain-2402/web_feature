@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	
+body{
+	padding:0;
+	margin:0;
+	background:#4d4d4d;
+	overflow-x: hidden;
+}
+
+
+
+.navegation{
+	position:fixed;
+	height:auto;
+	width:85vw;
+	top:2vh;
+	left:50%;
+	transform: translate(-50%,0);
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	backdrop-filter:blur(10px);
+	display: flex;
+	z-index: 99;
+	animation:animate_navegation 1000s ease-in-out;
+}
+@keyframes animate_navegation{
+	0%{
+		opacity:0;
+	}
+	1.13%{
+		opacity:0;
+	}
+	1.2%{
+		opacity:1;
+	}
+	99%{
+		opacity:1;	
+	}
+}
+.logo{
+	background:none;
+	color:white;
+	width:5vw;
+	padding:2vh 0 2vh 0;
+	box-shadow: 0 0 5px black;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	font-family: 'Signika Negative', sans-serif;
+	font-weight:600;
+	text-align: center;
+	float:left;
+	cursor:pointer;
+	flex:1;
+}
+.empty{
+	background:none;
+	float:left;
+	flex:5;
+}
+.menuBtn{
+	background:none;
+	color:white;
+	width:5vw;
+	padding:2vh 0 2vh 0;
+	box-shadow: 0 0 5px black;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	font-family: 'Play', sans-serif;
+	font-weight:600;
+	text-align: center;
+	float:left;
+	cursor:pointer;
+	flex:1;
+}
+
+
+
+.menuArea{
+	position:fixed;
+	height:auto;
+	width:0;
+	top:2vh;
+	left:50%;
+	transform: translate(-50%,0);
+	border-radius: 10px;
+	backdrop-filter:blur(8px);
+	opacity:0;
+	box-shadow: 0 0 10px black;
+	z-index: 100;
+	display: flex;
+	transition:.3s;
+}
+.menuArea.on{
+	opacity:1;
+	width:85vw;
+}
+.home{
+	background:none;
+	color:white;
+	width:5vw;
+	padding:2vh 0 2vh 0;
+	box-shadow: 0 0 5px black;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	font-family: 'Signika Negative', sans-serif;
+	font-weight:600;
+	text-align: center;
+	float:left;
+	cursor:pointer;
+	flex:1;
+}
+.catagory{
+	background:none;
+	color:white;
+	width:5vw;
+	padding:2vh 0 2vh 0;
+	box-shadow: 0 0 5px black;
+	font-family: 'Signika Negative', sans-serif;
+	font-weight:600;
+	text-align: center;
+	float:left;
+	cursor:pointer;
+	flex:1;
+}
+.aboutUs{
+	background:none;
+	color:white;
+	width:5vw;
+	padding:2vh 0 2vh 0;
+	box-shadow: 0 0 5px black;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	font-family: 'Play', sans-serif;
+	font-weight:600;
+	text-align: center;
+	float:left;
+	cursor:pointer;
+	flex:1;
+}
+
+
+
+.cover{
+	height:100vh;
+}
+.imageSlider{
+	position:absolute;
+	height:100vh;
+	width:100vw;
+	z-index:-5;
+	animation:animate_image 1000s ease-in-out;
+}
+@keyframes animate_image{
+	0%{
+		/*a0*/
+		background:url(a0.jpg); 
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.30%{
+		/*a0*/
+		background:url(a0.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.31%{
+		/*a1*/
+		background:url(a1.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.60%{	
+		/*a1	*/
+		background:url(a1.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.61%{
+		/*a2*/
+		background:url(a2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.89%{
+		/*a2*/
+		background:url(a2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.90%{
+		/*a3*/
+		background:url(a3.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	99.99%{
+		/*a3*/
+		background:url(a3.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+
+
+.dark{
+	position:absolute;
+	height:auto;
+	width:100vw;
+	background:#4d4d4d;
+	z-index:-4;
+	animation:animate_dark 1000s ease-in-out;
+}
+@keyframes animate_dark{
+	0%{
+		float:left;
+		width:0vw;
+	}
+	.20%{
+		float:left;
+		width:0vw;
+	}
+	.25%{
+		float:left;
+		width:100vw;
+	}
+
+	.30%{
+		float:right;
+		margin-left:0;
+		width:100vw;
+	}
+	.38%{
+		float:right;
+		margin-left:100vw;
+		width:0vw;
+	}
+
+	99.99%{
+
+		float:right;
+		margin-left:100vw;
+		width:0vw;	
+	}
+}
+.name_1{
+	padding:50vh 0 50vh 0;
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	color:white;
+	animation:animate_name_one 1000s ease-in-out;
+}
+@keyframes animate_name_one{
+	0%{
+		opacity:0;
+		font-size:0;
+	}
+	.20%{
+		opacity:0;
+		font-size:0;
+	}
+	.25%{
+		opacity: 1;
+		font-size:20px;
+	}
+
+	.30%{
+		opacity:1;
+		font-size:20px;
+	}
+	.38%{
+		opacity:0;
+		font-size:0;
+	}
+
+	99.99%{
+		opacity: 0;
+		font-size:0;
+	}
+}
+
+
+
+.white{
+	position:absolute;
+	height:100vh;
+	width:100vw;
+	background:white;
+	z-index:-3;
+	animation:animate_white 1000s ease-in-out;
+}
+@keyframes animate_white{
+	0%{
+		float:left;
+		width:0vw;
+	}
+	.50%{
+		float:left;
+		width:0vw;
+	}
+	.55%{
+		float:left;
+		width:100vw;
+	}
+
+	.60%{
+		float:right;
+		margin-left:0;
+		width:100vw;
+	}
+	.68%{
+		float:right;
+		margin-left:100vw;
+		width:0vw;
+	}
+	99.99%{
+
+		float:right;
+		margin-left:100vw;
+		width:0vw;	
+	}
+}
+.name_2{
+	padding:50vh 0 50vh 0;
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	color:black;
+	animation:animate_name_two 1000s ease-in-out;
+}
+@keyframes animate_name_two{
+	0%{
+		opacity:0;
+		font-size:0;
+	}
+	.50%{
+		opacity: 0;
+		font-size:0;
+	}
+	.55%{
+		opacity: 1;
+		font-size:20px;
+	}
+
+	.60%{
+		opacity: 1;
+		font-size:20px;
+	}
+	.68%{
+		opacity: 0;
+		font-size:0;
+	}
+	99.99%{
+		opacity: 0;	
+	}
+		font-size:0;
+}
+
+
+
+.black{
+	position:absolute;
+	height:100vh;
+	width:100vw;
+	background:black;
+	z-index:-2;
+	animation:animate_black 1000s ease-in-out;
+}
+@keyframes animate_black{
+	0%{
+		float:left;
+		width:0vw;
+	}
+	.80%{
+		float:left;
+		width:0vw;
+	}
+	.85%{
+		float:left;
+		width:100vw;
+	}
+
+	.90%{
+		float:right;
+		margin-left:0;
+		width:100vw;
+	}
+	.98%{
+		float:right;
+		margin-left:100vw;
+		width:0vw;
+	}
+	99.99%{
+
+		float:right;
+		margin-left:100vw;
+		width:0vw;	
+	}
+}
+.name_3{
+	padding:50vh 0 50vh 0;
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	color:white;
+	animation:animate_name_three 1000s ease-in-out;
+}
+@keyframes animate_name_three{
+	0%{
+		opacity: 0;
+		font-size:0;
+	}
+	.80%{
+		opacity: 0;
+		font-size:0;
+	}
+	.85%{
+		opacity: 1;
+		font-size:20px;
+	}
+
+	.90%{
+		opacity: 1;
+		font-size:20px;
+	}
+	.98%{
+		opacity: 0;
+		font-size:0;
+	}
+	99.99%{
+		opacity: 0;	
+	}
+		font-size:0;
+}
+
+
+
+.transparent{
+	position:absolute;
+	height:100%;
+	backdrop-filter:blur(4px);
+	z-index:-1;
+	animation:animate_transparent 1000s ease-in-out;
+}
+@keyframes animate_transparent{
+	0%{
+		width:0vw;
+	}
+	1%{
+		width:0vw;
+	}
+	1.11%{
+		width:100vw;
+	}
+	99.99%{
+		width:100vw;	
+	}
+}
+.images_cover{
+	height:50vh;
+	width:90vw;
+	margin-top:25vh;
+	margin-left:50%;
+	transform: translate(-50%,0);
+	display:flex;
+	overflow: hidden;
+	animation:animate_images_cover 1000s ease-in-out;
+}
+@keyframes animate_images_cover{
+	0%{
+		opacity:0;
+		box-shadow: none;
+	}
+	1.15%{
+		opacity:0;
+		box-shadow: none;
+	}
+	1.18%{
+		opacity:1;
+		box-shadow: none;
+	}
+	1.35%{
+		opacity: 1;
+		box-shadow: none;
+	}
+	1.37%{
+		opacity: 1;
+		box-shadow: 0 0 60px black;
+	}
+	99.99%{
+		opacity:1;	
+		box-shadow: 0 0 60px black;
+	}
+}
+.image_1{
+	flex:1;
+	height:100%;
+	background:url(a4.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	animation:animate_landing_image 1000s ease-in-out;
+}
+@keyframes animate_landing_image{
+	0%{
+		margin-top:100%;
+	}
+	1.2%{
+		margin-top:100%;
+	}
+	1.25%{
+		margin-top:0%;
+	}
+	99.99%{
+		margin-top:0%;
+	}
+}
+.image_2{
+	flex:1;
+	height:100%;
+	background:url(a5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	animation:animate_landing_image 1000s ease-in-out;
+	animation-delay: .3s;
+}
+.image_3{
+	flex:1;
+	height:100%;
+	background:url(a6.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	animation:animate_landing_image 1000s ease-in-out;
+	animation-delay:.6s;
+}
+
+
+
+.skill_1{
+	height:50vh;
+	width:80vw;
+	margin-top:30vh;
+	margin-left:50%;
+	transform: translate(-50%,0);
+	background:#4d4d4d;
+	border-radius:10px;
+	box-shadow: 0 0 50px black;
+}
+.skill_2{
+	height:50vh;
+	width:80vw;
+	margin-top:30vh;
+	margin-left:50%;
+	transform: translate(-50%,0);
+	background:#4d4d4d;
+	border-radius:10px;
+	box-shadow: 0 0 50px black;
+}
+.skill_3{
+	height:50vh;
+	width:80vw;
+	margin-top:30vh;
+	margin-left:50%;
+	transform: translate(-50%,0);
+	background:#4d4d4d;
+	border-radius:10px;
+	box-shadow: 0 0 50px black;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="navegation">
+		<div class="logo">LOGO</div>
+		<div class="empty"></div>
+		<div class="menuBtn">MENU</div>
+	</div>
+	<div class="menuArea">
+		<div class="home">Home</div>
+		<div class="catagory">Projects</div>
+		<div class="aboutUs">About Me</div>
+	</div>
+
+	<div class="cover">
+		<div class="imageSlider"></div>
+		<div class="dark">
+			<div class="name_1">Laptop</div>
+		</div>
+		<div class="white">
+			<div class="name_2">Phone</div>
+		</div>
+		<div class="black">
+			<div class="name_3">Watch</div>
+		</div>
+		<div class="transparent">
+			<div class="images_cover">
+				<div class="image_1"></div>
+				<div class="image_2"></div>
+				<div class="image_3"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="skill_1"></div>
+	<div class="skill_2"></div>
+	<div class="skill_3"></div>
+
+<script type="text/javascript">
+	
+	document.querySelector(".menuBtn").addEventListener("click",function(){
+		document.querySelector(".menuArea").classList.add("on");
+	});
+	document.querySelector(".home").addEventListener("click",function(){
+		document.querySelector(".menuArea").classList.remove("on");
+	});
+</script>
+
+
+</body>
+</html>
