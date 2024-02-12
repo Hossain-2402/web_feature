@@ -9,9 +9,9 @@
 	.shadow_1{
 		position: fixed;
 		height: 40vh;
-		width: 40vw;
-		background: black;
-		filter: blur(30rem);
+		width: 30vw;
+		background: red;
+		filter: blur(25rem);
 		top: -15vh;
 		left: -15vw;
 	}
@@ -19,8 +19,8 @@
 		position: fixed;
 		height: 25vh;
 		width: 25vw;
-		background: black;
-		filter: blur(40vh);
+		background: blue;
+		filter: blur(35vh);
 		bottom: 0vh;
 		right: 0;
 	}
@@ -55,13 +55,37 @@
 		transform: translate(-50%,0);
 	}
 
+	@media(max-width: 991px){
+
+		.shadow_1{
+			background: red;
+			width: 40vw;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		.shadow_2{
+			background: blue;
+			width: 60vw;
+			bottom: 0;
+			right: 0;
+		}
+		.shadow_3{
+			height: 0;
+			width: 0;
+		}
+	}
+
 </style>
 </head>
 <body>
-<div class="shadow_1"></div>
-<div class="shadow_2"></div>
-<div class="shadow_3"></div>
-<div class="image"></div>
-<div class="box"></div>
+
+	<div class="shadow_1"></div>
+	<div class="shadow_2"></div>
+	<div class="shadow_3"></div>	
+
+	<div class="image"></div>
+	<div class="box"></div>
+
 </body>
+
 </html>
