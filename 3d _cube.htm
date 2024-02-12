@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+		background: #4d4d4d;
+}
+	.box{
+		position: relative;
+		height: 300px;
+		width: 300px;
+		margin:  30vh 0 0 50%;
+		transform: translate(-50%,0);
+		background:#3e3f46;
+		transform: skewY(-15deg);
+	}
+	.box::before{
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 150px;
+		top: 0;
+		left: -150px;
+		background: #2e3133;
+		transform-origin: right;
+		transform: skewY(45deg);
+	}
+	.box::after{
+		content: '';
+		position: absolute;
+		height: 150px;
+		width: 100%;
+		top: -150px;
+		left: 0;
+		background: #35383E;
+		transform-origin: bottom;
+		transform: skewX(45deg);
+	}
+
+	.shadow{
+		height: 10px;
+		width: 450px;
+		margin: 20vh 0 0 57%;
+		transform: translate(-57%,0);
+		background: black;
+		filter: blur(1.8rem);
+	}
+
+</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="shadow"></div>
+</body>
+</html>
