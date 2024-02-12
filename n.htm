@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+		background: white;
+		color: black;
+	}
+	.shadow_1{
+		position: fixed;
+		height: 40vh;
+		width: 40vw;
+		background: black;
+		filter: blur(30rem);
+		top: -15vh;
+		left: -15vw;
+	}
+	.shadow_2{
+		position: fixed;
+		height: 25vh;
+		width: 25vw;
+		background: black;
+		filter: blur(40vh);
+		bottom: 0vh;
+		right: 0;
+	}
+	.shadow_3{
+		position: fixed;
+		height: 25vh;
+		width: 25vw;
+		background: black;
+		filter: blur(30rem);
+		top: -10vh;
+		right: 0;
+	}
+	.box{
+		height: 50vh;
+		width: 50vw;
+		margin: -45vh 0 0 50%;
+		transform: translate(-50%,0);
+		background: linear-gradient(to right bottom , rgba(255,255,255,0.7), rgba(255,255,255,0.7));
+		border-radius: 10px;
+		box-shadow: 0 0 10px black;
+		backdrop-filter: blur(8px);
+		z-index: 2;
+		float: left;
+	}
+
+	.image{
+		background: url(image-0.jpg);
+		background-repeat: no-repeat;
+		height: 40vh;
+		width: 20vw;
+		margin: 30vh 0 0 50%;
+		transform: translate(-50%,0);
+	}
+
+</style>
+</head>
+<body>
+<div class="shadow_1"></div>
+<div class="shadow_2"></div>
+<div class="shadow_3"></div>
+<div class="image"></div>
+<div class="box"></div>
+</body>
+</html>
